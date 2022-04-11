@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	const float RATE_USD = 1233.1;  // »ó¼ö´Â ´Ü¾î¿Í´Ü¾î»çÀÌ´Â ¾ğ´õ¹Ù ±×¸®°í ¿Ã ´ë¹®ÀÚ·Î ½áÁØ´Ù. (È¯À² ¹Ù²î¸é ±×¿¡ ¸Â°Ô ¹Ù²ãÁÖ¸é °è»êµÇ´Ï±î »ó¼ö¸¦ »ç¿ëÇÑ´Ù.) 
+	const float RATE_USD = 1233.1;  // ìƒìˆ˜ëŠ” ë‹¨ì–´ì™€ ë‹¨ì–´ ì‚¬ì´ëŠ” ì–¸ë”ë°” ê·¸ë¦¬ê³  ì˜¬ ëŒ€ë¬¸ìë¡œ ì¨ì¤€ë‹¤. (í™˜ìœ¨ ë°”ë€Œë©´ ê·¸ì— ë§ê²Œ ë°”ê¿”ì£¼ë©´ ê³„ì‚°ë˜ë‹ˆê¹Œ ìƒìˆ˜ë¥¼ ì‚¬ìš©í•œë‹¤.) 
 	int inputWon = 50000;  
 	float outputDollar = 0; 
 	float outputDollar2 = 0;
@@ -24,11 +24,11 @@ int main() {
 
 	
 	
-	printf("È¯ÀüÀ» ¿øÇÏ´Â ¿øÈ­ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("í™˜ì „ì„ ì›í•˜ëŠ” ì›í™” ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%d", &inputWon); 
-//	printf("1000¿ø %d°³, 500¿ø %d°³, 100¿ø %d°³, 50¿ø %d°³, 10¿ø %d°³\n", output1000, output500, output100, output50, output10);
-	// ´Ş·¯ 
-	outputDollar = inputWon / RATE_USD;   // inputÀ» È¯À²·Î ³ª´©¸é ´Ş·¯°¡ ³ª¿Â´Ù. 
+//	printf("1000ì› %dê°œ, 500ì› %dê°œ, 100ì› %dê°œ, 50ì› %dê°œ, 10ì› %dê°œ\n", output1000, output500, output100, output50, output10);
+	// ë‹¬ëŸ¬ 
+	outputDollar = inputWon / RATE_USD;   // inputì„ í™˜ìœ¨ë¡œ ë‚˜ëˆ„ë©´ ë‹¬ëŸ¬ê°€ ë‚˜ì˜¨ë‹¤. 
 	outputDollar2 = (int)outputDollar;
 	outputCent = outputDollar - (int)outputDollar;
 	outputDongJeon_USD = int(outputCent * 1233.1);
@@ -48,16 +48,16 @@ int main() {
 	int output10_USD = outputWon50_USD / 10;
 	int outputWon10_USD = outputWon50_USD - output10_USD * 10;
 	 
-	printf("%d¿ø-> %10.2f´Ş·¯\n", inputWon, outputDollar);
-	printf("%d¿ø-> %10.2f´Ş·¯\n", inputWon, outputDollar2);
-	printf("%d¿ø-> %10.2f´Ş·¯\n", inputWon, outputCent);
-	printf("%d¿ø-> %10.2f¿ø\n", inputWon, outputDongJeon_USD);
-	printf("1000¿ø %d°³, 500¿ø %d°³, 100¿ø %d°³, 50¿ø %d°³, 10¿ø %d°³\n", output1000_USD, output500_USD, output100_USD, output50_USD, output10_USD);
+	printf("%dì›-> %10.2fë‹¬ëŸ¬\n", inputWon, outputDollar);
+	printf("%dì›-> %10.2fë‹¬ëŸ¬\n", inputWon, outputDollar2);
+	printf("%dì›-> %10.2fë‹¬ëŸ¬\n", inputWon, outputCent);
+	printf("%dì›-> %10.2fì›\n", inputWon, outputDongJeon_USD);
+	printf("1000ì› %dê°œ, 500ì› %dê°œ, 100ì› %dê°œ, 50ì› %dê°œ, 10ì› %dê°œ\n", output1000_USD, output500_USD, output100_USD, output50_USD, output10_USD);
 	printf("********************************************\n");
 
 
 
-	// ¿£È­ 
+	// ì—”í™” 
 	const float RATE_JPY = 9.8716;
 	float outputJPY = 0;
 	float outputJPY2 = 0;
@@ -82,14 +82,14 @@ int main() {
 	int output10_JPY = outputWon50_JPY / 10;
 	int outputWon10_JPY = outputWon50_JPY - output10_JPY * 10;
 	
-	printf("%d¿ø-> %10.2f¿£\n", inputWon, outputJPY);
-	printf("%d¿ø-> %10.2f¿£\n", inputWon, outputJPY2);
-	printf("%d¿ø-> %10.2f¿£\n", inputWon, outputCent2);
-	printf("%d¿ø-> %10.2f¿ø\n", inputWon, outputDongJeon_JPY);
-	printf("1000¿ø %d°³, 500¿ø %d°³, 100¿ø %d°³, 50¿ø %d°³, 10¿ø %d°³\n", output1000_JPY, output500_JPY, output100_JPY, output50_JPY, output10_JPY);
+	printf("%dì›-> %10.2fì—”\n", inputWon, outputJPY);
+	printf("%dì›-> %10.2fì—”\n", inputWon, outputJPY2);
+	printf("%dì›-> %10.2fì—”\n", inputWon, outputCent2);
+	printf("%dì›-> %10.2fì›\n", inputWon, outputDongJeon_JPY);
+	printf("1000ì› %dê°œ, 500ì› %dê°œ, 100ì› %dê°œ, 50ì› %dê°œ, 10ì› %dê°œ\n", output1000_JPY, output500_JPY, output100_JPY, output50_JPY, output10_JPY);
 	printf("********************************************\n");
 	
-	// À§¾È
+	// ìœ„ì•ˆ
 	const float RATE_CNY = 193.2;
 	float outputCNY = 0;
 	float outputCNY2 = 0;
@@ -114,14 +114,14 @@ int main() {
 	int output10_CNY = outputWon50_CNY / 10;
 	int outputWon10_CNY = outputWon50_CNY - output10_CNY * 10;
 	
-	printf("%d¿ø-> %10f.2À§¾È\n", inputWon, outputCNY);
-	printf("%d¿ø-> %10f.2À§¾È\n", inputWon, outputCNY2);
-	printf("%d¿ø-> %10f.2À§¾È\n", inputWon, outputCent3);
-	printf("%d¿ø-> %10f.2¿ø\n", inputWon, outputDongJeon_CNY);
-	printf("1000¿ø %d°³, 500¿ø %d°³, 100¿ø %d°³, 50¿ø %d°³, 10¿ø %d°³\n", output1000_CNY, output500_CNY, output100_CNY, output50_CNY, output10_CNY);
+	printf("%dì›-> %10f.2ìœ„ì•ˆ\n", inputWon, outputCNY);
+	printf("%dì›-> %10f.2ìœ„ì•ˆ\n", inputWon, outputCNY2);
+	printf("%dì›-> %10f.2ìœ„ì•ˆ\n", inputWon, outputCent3);
+	printf("%dì›-> %10f.2ì›\n", inputWon, outputDongJeon_CNY);
+	printf("1000ì› %dê°œ, 500ì› %dê°œ, 100ì› %dê°œ, 50ì› %dê°œ, 10ì› %dê°œ\n", output1000_CNY, output500_CNY, output100_CNY, output50_CNY, output10_CNY);
 	printf("********************************************\n");
 	
-	// À¯·Î 
+	// ìœ ë¡œ 
 	const float RATE_EUR = 1342.53;
 	float outputEUR = 0;
 	float outputEUR2 = 0;
@@ -146,14 +146,14 @@ int main() {
 	int output10_EUR = outputWon50_EUR / 10;
 	int outputWon10_EUR = outputWon50_EUR - output10_EUR * 10;
 	
-	printf("%d¿ø-> %10f.2À¯·Î\n", inputWon, outputEUR);
-	printf("%d¿ø-> %10f.2À¯·Î\n", inputWon, outputEUR2);
-	printf("%d¿ø-> %10f.2À¯·Î\n", inputWon, outputCent4);
-	printf("%d¿ø-> %10f.2¿ø\n", inputWon, outputDongJeon_EUR);
-	printf("1000¿ø %d°³, 500¿ø %d°³, 100¿ø %d°³, 50¿ø %d°³, 10¿ø %d°³\n", output1000_EUR, output500_EUR, output100_EUR, output50_EUR, output10_EUR);
+	printf("%dì›-> %10f.2ìœ ë¡œ\n", inputWon, outputEUR);
+	printf("%dì›-> %10f.2ìœ ë¡œ\n", inputWon, outputEUR2);
+	printf("%dì›-> %10f.2ìœ ë¡œ\n", inputWon, outputCent4);
+	printf("%dì›-> %10f.2ì›\n", inputWon, outputDongJeon_EUR);
+	printf("1000ì› %dê°œ, 500ì› %dê°œ, 100ì› %dê°œ, 50ì› %dê°œ, 10ì› %dê°œ\n", output1000_EUR, output500_EUR, output100_EUR, output50_EUR, output10_EUR);
 	printf("********************************************\n");
 	
-	// ÆÄ¿îµå
+	// íŒŒìš´ë“œ
 	const float RATE_GBP = 1605.22;
 	float outputGBP = 0;
 	float outputGBP2 = 0;
@@ -178,11 +178,11 @@ int main() {
 	int output10_GBP = outputWon50_GBP / 10;
 	int outputWon10_GBP = outputWon50_GBP - output10_GBP * 10;
 	
-	printf("%d¿ø-> %10f.2ÆÄ¿îµå\n", inputWon, outputGBP);
-	printf("%d¿ø-> %10f.2ÆÄ¿îµå\n", inputWon, outputGBP2);
-	printf("%d¿ø-> %10f.2ÆÄ¿îµå\n", inputWon, outputCent5);
-	printf("%d¿ø-> %10f.2¿ø\n", inputWon, outputDongJeon_GBP);
-	printf("1000¿ø %d°³, 500¿ø %d°³, 100¿ø %d°³, 50¿ø %d°³, 10¿ø %d°³\n", output1000_GBP, output500_GBP, output100_GBP, output50_GBP, output10_GBP);
+	printf("%dì›-> %10f.2íŒŒìš´ë“œ\n", inputWon, outputGBP);
+	printf("%dì›-> %10f.2íŒŒìš´ë“œ\n", inputWon, outputGBP2);
+	printf("%dì›-> %10f.2íŒŒìš´ë“œ\n", inputWon, outputCent5);
+	printf("%dì›-> %10f.2ì›\n", inputWon, outputDongJeon_GBP);
+	printf("1000ì› %dê°œ, 500ì› %dê°œ, 100ì› %dê°œ, 50ì› %dê°œ, 10ì› %dê°œ\n", output1000_GBP, output500_GBP, output100_GBP, output50_GBP, output10_GBP);
 	printf("********************************************\n");
 	 
 	return 0;
